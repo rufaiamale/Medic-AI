@@ -1,8 +1,10 @@
-Medic AI: A Personalized Disease Prediction and Medicine Recommendation System with Machine Learning
+**Medic AI: Disease Prediction and Medicine Recommendation System with Machine Learning**
 
-Welcome to our cutting-edge modern AI powered web application designed to assist users in understanding their health and making informed decisions. This project uses machine learning models to analyze symptoms and predict possible diseases, along with personalized medical recommendations.
+This project is a Disease Prediction and Medicine Recommendation System that uses machine learning to help users understand and manage their health. By analyzing user-input symptoms, the system predicts possible diseases and provides detailed recommendations including precautions, medications, workouts, and dietary advice.
 
-🚀 Features
+
+**🚀 Features**
+
 1. User Friendly Interface
 
 An intuitive and clean interface that allows users to enter symptoms easily. The system supports autocomplete suggestions for faster and more accurate inputs.
@@ -45,7 +47,12 @@ User data is handled with strict privacy practices. No sensitive information is 
 
 As more data becomes available, the machine learning model will continue to improve. This ensures better accuracy and smarter recommendations over time.
 
-🛠️ Tech Stack
+📜 **License**
+
+This project is open source and available under the MIT License.
+
+
+**🛠️ Tech Stack**
 
 Python
 
@@ -58,3 +65,52 @@ Pandas and NumPy
 HTML, CSS, JavaScript
 
 Pickle for model serialization
+
+**Model Training**
+
+Training Dataset: https://www.kaggle.com/datasets/noorsaeed/medicine-recommendation-system-dataset
+
+**1. Data Loading and Preprocessing**
+
+Key preprocessing steps include:
+
+Reading the dataset and exploring its shape and unique prognosis values
+
+Using LabelEncoder to convert the categorical prognosis column into numeric labels
+
+Splitting the data into training and testing sets for model evaluation
+
+This preprocessing ensures that the data is in a suitable format for machine learning algorithms.
+
+2. Model Training
+
+Five machine learning models were trained and evaluated:
+
+Support Vector Classifier (SVC)
+
+Random Forest Classifier
+
+Gradient Boosting Classifier
+
+K Neighbors Classifier
+
+Multinomial Naive Bayes
+
+Each model achieved 80 percent accuracy.
+
+The SVC model was selected as the best performer for deployment.
+
+3. Model Saving and Loading
+
+To allow future use without retraining:
+
+The trained SVC model is saved using pickle
+
+The saved model is then loaded back and tested
+
+This ensures the prediction pipeline works correctly even after saving and loading
+
+4. Single Prediction
+
+The loaded model is used to perform a single prediction on sample inputs.
+This demonstrates how the system receives user symptoms, processes them, and returns a predicted disease label.
