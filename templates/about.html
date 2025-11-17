@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us | Medic AI</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8f9fa;
+      color: #343a40;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-color: #0d6efd;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      border-radius: 10px;
+      margin-bottom: 50px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .section-title {
+      margin: 50px 0 30px;
+      text-align: center;
+      font-weight: 600;
+      position: relative;
+    }
+    .section-title::after {
+      content: '';
+      width: 60px;
+      height: 3px;
+      background: #0d6efd;
+      display: block;
+      margin: 10px auto 0;
+      border-radius: 3px;
+    }
+
+    .card-icon {
+      font-size: 2rem;
+      color: #0d6efd;
+      margin-bottom: 15px;
+    }
+
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: none;
+      border-radius: 15px;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    /* Increase font sizes for main content sections */
+    .about-section h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .about-section p {
+      font-size: 1.25rem;
+      line-height: 1.8;
+    }
+
+    /* Navbar hover effects */
+    .navbar-nav .nav-link:hover {
+      color: #0d6efd !important;
+      transition: color 0.3s;
+    }
+    .navbar-brand:hover {
+      color: #0d6efd !important;
+      transition: color 0.3s;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
+  <div class="container-fluid">
+    <div class="logo me-2">
+      <img src="{{ url_for('static', filename='img.png') }}" alt="Logo" width="50" height="50">
+    </div>
+    <a class="navbar-brand fw-bold fs-4" href="#">Medic AI</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-4">
+        <li class="nav-item"><a class="nav-link fw-semibold fs-5 active" href="{{ url_for('index') }}">Home</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold fs-5 active" href="/about">About</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold fs-5" href="/contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold fs-5" href="/team">Team</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold fs-5" href="/blog">Blog</a></li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2 rounded-pill fs-6" type="search" placeholder="Search symptoms..." style="padding:8px 14px;">
+        <button class="btn btn-primary btn-sm rounded-pill fs-6" type="submit" style="padding:6px 16px;">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <h1>Welcome to Medic AI</h1>
+  <p>Where health meets technology, empowering you with knowledge, insights, and tools to take charge of your well-being.</p>
+</section>
+
+<!-- About Content -->
+<div class="container my-5 about-section">
+
+  <!-- Vision & Mission -->
+  <div class="row text-center">
+    <div class="col-md-6 mb-4">
+      <div class="card p-4 shadow-sm">
+        <i class="fas fa-eye card-icon"></i>
+        <h4>Our Vision</h4>
+        <p>We envision a world where healthcare information is accessible to all, empowering individuals to make informed decisions about their health.</p>
+      </div>
+    </div>
+    <div class="col-md-6 mb-4">
+      <div class="card p-4 shadow-sm">
+        <i class="fas fa-bullseye card-icon"></i>
+        <h4>Our Mission</h4>
+        <p>We provide a seamless AI-powered platform to help identify potential health concerns and enhance health literacy for everyone.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Who We Are -->
+  <div class="section-title">Who We Are</div>
+  <p class="text-center mb-5">
+    A passionate team of healthcare professionals, data scientists, and tech enthusiasts dedicated to making healthcare accessible, personalized, and easy to understand.
+    We combine expertise and technology to create a platform focused on your well-being.
+  </p>
+
+  <!-- How We Do It -->
+  <div class="section-title">How We Do It</div>
+  <p class="text-center mb-5">
+    Our platform leverages robust machine learning models trained on a vast dataset of symptoms and diseases.
+    By inputting your symptoms, we generate accurate predictions, helping you make informed decisions about your health.
+  </p>
+
+  <!-- Well-being -->
+  <div class="section-title">Your Well-being, Our Priority</div>
+  <p class="text-center mb-5">
+    Navigating healthcare can be complex. Medic AI not only provides precise predictions but also comprehensive insights including precautions, diet advice, and lifestyle tips to support your journey to better health.
+  </p>
+
+  <!-- Call to Action -->
+  <div class="section-title">Join Us on this Journey</div>
+  <p class="text-center mb-5">
+    Explore our platform, engage with educational content, and take control of your health.
+    Together, we can redefine how individuals access and understand healthcare information.
+    Thank you for trusting Medic AI as your health companion.
+  </p>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
