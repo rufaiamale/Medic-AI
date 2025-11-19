@@ -1,0 +1,24 @@
+Setup Instructions for Medic AI
+
+1.  Clone the Repository git clone
+    https://github.com/yourusername/medic-ai.git cd medic-ai
+
+2.  Create a Virtual Environment Windows: python -m venv .venv .venv
+
+    Mac or Linux: python3 -m venv .venv source .venv/bin/activate
+
+3.  Install Dependencies pip install -r requirements.txt
+
+4.  Run the Application python main.py
+
+    Access the app at: http://127.0.0.1:5000/
+
+    To allow external access: app.run(host=“0.0.0.0”, port=5000)
+
+5.  Deployment on Render
+
+    -   Push your code to GitHub: git add . git commit -m “Initial
+        commit” git push
+
+    -   Create a new Web Service on Render Build command: pip install -r
+        requirements.txt Start command: python main.py
